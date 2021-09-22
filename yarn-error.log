@@ -1,0 +1,77 @@
+Arguments: 
+  /home/saeid/.nvm/versions/node/v14.17.5/bin/node /home/saeid/.nvm/versions/node/v14.17.5/bin/yarn add rxjs @types/rxjs
+
+PATH: 
+  /home/saeid/.nvm/versions/node/v14.17.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.17.5
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2frxjs: Not found
+      at Request.params.callback [as _callback] (/home/saeid/.nvm/versions/node/v14.17.5/lib/node_modules/yarn/lib/cli.js:66992:18)
+      at Request.self.callback (/home/saeid/.nvm/versions/node/v14.17.5/lib/node_modules/yarn/lib/cli.js:140763:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (/home/saeid/.nvm/versions/node/v14.17.5/lib/node_modules/yarn/lib/cli.js:141735:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (/home/saeid/.nvm/versions/node/v14.17.5/lib/node_modules/yarn/lib/cli.js:141657:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "challenge1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node dist/app.js",
+      "dev": "nodemon src/app.ts",
+      "build": "tsc -p .",
+      "test": "jest -c jest.unit.json",
+      "test:coverage": "jest --coverage -c jest.unit.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@hapi/joi": "^17.1.1",
+      "@types/cors": "^2.8.12",
+      "@types/joi": "^17.2.3",
+      "@types/mongoose": "^5.11.97",
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "joi": "^17.4.2",
+      "mongoose": "^5.13.5",
+      "supertest": "^6.1.4",
+      "swagger-jsdoc": "^6.1.0",
+      "swagger-ui-express": "^4.1.6"
+    },
+    "devDependencies": {
+      "@types/express": "^4.17.13",
+      "@types/hapi__joi": "^17.1.7",
+      "@types/jest": "^26.0.24",
+      "@types/node": "^16.4.13",
+      "@types/swagger-jsdoc": "^6.0.1",
+      "@types/swagger-ui-express": "^4.1.3",
+      "jest": "^27.0.6",
+      "nodemon": "^2.0.12",
+      "ts-jest": "^27.0.4",
+      "ts-node": "^10.1.0",
+      "typescript": "^4.3.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

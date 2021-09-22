@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "b49fa817-39db-4384-bdf3-41262dc41e7f",
+		"name": "vendingMachine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"username\": \"buyer3\",\n  \"password\": \"123123\",\n   \"role\": \"buyer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}user/add",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"seller1\",\n  \"password\": \"123123\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}user/login",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRiNDU5ZWNhYmY5N2FkNGViMzdlYmYiLCJpYXQiOjE2MzIzMjI5NzQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.RaCJrmxn4n6bjDmSWWraGaz-vlo0XiqiKEF01Fuxbyw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role\": \"seller\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}user/edit/:idd",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"edit",
+								":idd"
+							],
+							"variable": [
+								{
+									"key": "idd",
+									"value": "614b459ecabf97ad4eb37ebf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1MDliMTk3YTc1ZDQ2ZDg1M2U0MWUiLCJpYXQiOjE2MzIxNjgyNTQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.E6qP4RqOWyWWl3s3BheXT2D7aCf-Op_oNmveF7M10uA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"username\": \"buyer\",\n  \"password\": \"123321\",\n   \"role\": \"buyer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}user/list",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1MDliMTk3YTc1ZDQ2ZDg1M2U0MWUiLCJpYXQiOjE2MzIxNjgyNTQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.E6qP4RqOWyWWl3s3BheXT2D7aCf-Op_oNmveF7M10uA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"username\": \"buyer\",\n  \"password\": \"123321\",\n   \"role\": \"buyer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}user/detail/:Id",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"detail",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "614b459ecabf97ad4eb37ebc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1MDliMTk3YTc1ZDQ2ZDg1M2U0MWUiLCJpYXQiOjE2MzIxNjgyNTQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.E6qP4RqOWyWWl3s3BheXT2D7aCf-Op_oNmveF7M10uA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}user/delete/:Id",
+							"host": [
+								"{{base}}user"
+							],
+							"path": [
+								"delete",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "614b46f0ee99c9b3f66bb19e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJlNDU1ODM4ZmRmZjg1Yzg1MjciLCJpYXQiOjE2MzIzMjU1MTIsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.w7rpS7YW1Y7QgjXGwy-YC_2gt3L-DEset8AfGPEzwqA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"amountAvailable\": 10,\n      \"cost\": 15,\n      \"productName\": \"seller1_product2\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}product/add",
+							"host": [
+								"{{base}}product"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit  Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJlNDU1ODM4ZmRmZjg1Yzg1MjciLCJpYXQiOjE2MzIzMjQyNjQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.wgVThBED-s2UsI6OeO9P6Z4llIDEdsweI5kjOrMB-7k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"amountAvailable\": 90,\n      \"cost\": 73\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}product/edit/:id",
+							"host": [
+								"{{base}}product"
+							],
+							"path": [
+								"edit",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "614b4a4c055acbbb12ffeb97"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List  Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1MDliMTk3YTc1ZDQ2ZDg1M2U0MWUiLCJpYXQiOjE2MzIxNjgyNTQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.E6qP4RqOWyWWl3s3BheXT2D7aCf-Op_oNmveF7M10uA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"username\": \"buyer\",\n  \"password\": \"123321\",\n   \"role\": \"buyer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}product/list",
+							"host": [
+								"{{base}}product"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail  Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1MDliMTk3YTc1ZDQ2ZDg1M2U0MWUiLCJpYXQiOjE2MzIxNjgyNTQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.E6qP4RqOWyWWl3s3BheXT2D7aCf-Op_oNmveF7M10uA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"username\": \"buyer\",\n  \"password\": \"123321\",\n   \"role\": \"buyer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}product/detail/:Id",
+							"host": [
+								"{{base}}product"
+							],
+							"path": [
+								"detail",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "614b4a4c055acbbb12ffeb97"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJlNDU1ODM4ZmRmZjg1Yzg1MjciLCJpYXQiOjE2MzIzMjQyNjQsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.wgVThBED-s2UsI6OeO9P6Z4llIDEdsweI5kjOrMB-7k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}product/delete/:Id",
+							"host": [
+								"{{base}}product"
+							],
+							"path": [
+								"delete",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "614b4a4c055acbbb12ffeb97"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"item": [
+				{
+					"name": "deposit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJkNTU1ODM4ZmRmZjg1Yzg1MjMiLCJpYXQiOjE2MzIyNjMxODMsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.JzNONIMVK5Na1h1kNjaSbXEYxe3g9r_ZFhBStrnysuQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deposit\": 50\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}purchase/deposit",
+							"host": [
+								"{{base}}purchase"
+							],
+							"path": [
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJkNTU1ODM4ZmRmZjg1Yzg1MjMiLCJpYXQiOjE2MzIxNzQ4ODMsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.t8WuiWfqGD6PYmR5teGfyQ0i8l3livdRzkh7TMVhZbs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"productId\":\"6149024227231aec1d51bebf\", \n\"amount\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}purchase/buy",
+							"host": [
+								"{{base}}purchase"
+							],
+							"path": [
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ4ZmJkNTU1ODM4ZmRmZjg1Yzg1MjMiLCJpYXQiOjE2MzIxNzQ4ODMsImF1ZCI6ImFwcCIsImlzcyI6InZlbmRpbmdQcm9qZWN0Iiwic3ViIjoibG9naW4ifQ.t8WuiWfqGD6PYmR5teGfyQ0i8l3livdRzkh7TMVhZbs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}purchase/reset",
+							"host": [
+								"{{base}}purchase"
+							],
+							"path": [
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
